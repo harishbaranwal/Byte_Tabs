@@ -310,6 +310,8 @@ background:  linear-gradient(300deg, #ede3e3,30%, #e9e4e4, #d8e3e4, #cae7e9);
   width:100px;
   height:40px;
   border-radius: 40px;
+  font-size: 16px;
+  font-weight: 600;
   border-style: none;
   margin-top: 20px;
   border:1px solid black;
@@ -322,9 +324,7 @@ background:  linear-gradient(300deg, #ede3e3,30%, #e9e4e4, #d8e3e4, #cae7e9);
   font-size:xx-large;
   
 }
-.card-top h3{
-  color:#FB6E0F;
-}
+
 
 .underline {
   text-decoration: none; 
