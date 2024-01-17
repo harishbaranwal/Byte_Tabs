@@ -44,3 +44,26 @@ function slideShow(){
 }
 slideShow();
 
+
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+
+      document.querySelector(this.getAttribute('href')).scrollIntoView({
+          behavior: 'smooth'
+      });
+  });
+});
+
+window.addEventListener('scroll', function () {
+  var scrollPosition = window.scrollY;
+  document.querySelectorAll('a[href^="#"]').forEach(function (el) {
+      var section = document.querySelector(el.getAttribute('href'));
+      if (section.offsetTop <= scrollPosition && section.offsetTop + section.offsetHeight > scrollPosition) {
+          el.classList.add('active');
+      } else {
+          el.classList.remove('active');
+      }
+  });
+});
